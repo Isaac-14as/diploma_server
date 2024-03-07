@@ -2,10 +2,10 @@ from fastapi import Depends, Request, HTTPException, status
 from jose import jwt, JWTError
 from datetime import datetime
 
-from config import settings
-from users.dao import UsersDAO
-from users.models import Users
-from exceptions import *
+from app.config import settings
+from app.users.dao import UsersDAO
+from app.users.models import Users
+from app.exceptions import *
 
 def get_token(request: Request):
     token = request.cookies.get("app_access_token")

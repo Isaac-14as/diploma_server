@@ -3,8 +3,8 @@ from datetime import datetime, timedelta
 from passlib.context import CryptContext
 from pydantic import EmailStr
 
-from config import settings
-from users.dao import UsersDAO
+from app.config import settings
+from app.users.dao import UsersDAO
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
